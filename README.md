@@ -26,6 +26,17 @@
 
 </details>
 
+## 下载与安装
+
+在 [GitHub Releases](https://github.com/shaw-baobao/Faraway/releases/latest) 下载最新版本：
+
+- `Faraway-1.0.0-macos-arm64.dmg`：打开磁盘映像，将「远眺」拖入「Applications」。
+- `Faraway-1.0.0-macos-arm64.zip`：解压后，将`远眺.app`移入「应用程序」文件夹。
+
+安装后可在「应用程序」中打开「远眺」，也可用 Spotlight 搜索「远眺」。应用主要运行在菜单栏，首次启动会显示控制面板，后续可点击眼睛图标操作。
+
+当前预编译包适用于 Apple Silicon Mac，最低 macOS 14。应用采用本机临时签名，尚未经过 Apple 公证，在其他 Mac 上可能被 Gatekeeper 拦截；如果无法打开，可按下方步骤从源码本机构建。Intel Mac 暂不提供预编译包。
+
 ## 构建与运行
 
 需要 macOS 14 或更新版本，以及 Swift 6 工具链。开发时使用 Xcode 27.1 和 Swift 6.4，其他兼容工具链尚待验证。
@@ -43,7 +54,7 @@ open dist/Faraway.app
 
 长期使用时，可将 `Faraway.app` 移到「应用程序」文件夹，再在偏好设置中打开「登录 Mac 时启动」。系统可能要求在「系统设置 → 通用 → 登录项」中允许。
 
-本仓库提供源码，编译产物不会提交到 Git。临时签名应用尚未经过 Apple 公证；公开分发的安装包需要另行使用 Developer ID 签名并公证。Intel Mac 需要在对应架构环境构建。
+源码历史不包含编译产物，预编译包通过 GitHub Releases 单独提供。Intel Mac 需要在对应架构环境构建。
 
 ## 测试
 
